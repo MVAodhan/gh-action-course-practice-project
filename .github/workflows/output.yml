@@ -1,0 +1,9 @@
+name: Output Event Details
+on:
+  issues:
+    types: [opened]
+jobs:
+  Log Details:
+  steps:
+    - name: output event details
+      run: echo "${{ toJSON(github)}}"
